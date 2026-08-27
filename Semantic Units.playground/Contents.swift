@@ -4,7 +4,7 @@ let text = "Steve Jobs, Steve Wozniak, and Ronald Wayne founded Apple Computer i
 
 let tagger = NLTagger(tagSchemes: [NLTagScheme.nameTypeOrLexicalClass])
 
-tagger.enumerateTags(in: text.startIndex..<text.endIndex, unit: NLTokenUnit.word, scheme: NLTagScheme.nameTypeOrLexicalClass, options: [.omitPunctuation, .omitWhitespace, NLTagger.Options.joinNames]){ (tag, range) -> Bool in
+ tagger.enumerateTags(in: text.startIndex..<text.endIndex, unit: NLTokenUnit.word, scheme: NLTagScheme.nameTypeOrLexicalClass, options: [.omitPunctuation, .omitWhitespace, NLTagger.Options.joinNames]){ (tag, range) -> Bool in
     
     print(text[range])
     print(tag?.rawValue ?? "unknown")
