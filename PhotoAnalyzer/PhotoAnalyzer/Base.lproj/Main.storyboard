@@ -16,13 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMh-vj-i5F">
-                                <rect key="frame" x="-23" y="59" width="416" height="793"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dMh-vj-i5F">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgE-zL-LiS">
-                                <rect key="frame" x="26" y="807" width="57" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BgE-zL-LiS">
+                                <rect key="frame" x="0.0" y="772.66666666666663" width="57" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="camera.on.rectangle.fill" catalog="system">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,6 +32,14 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BgE-zL-LiS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F2z-h3-Ih9"/>
+                            <constraint firstItem="dMh-vj-i5F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jeg-2G-aiB"/>
+                            <constraint firstAttribute="bottom" secondItem="BgE-zL-LiS" secondAttribute="bottom" constant="45" id="mee-ZP-0a4"/>
+                            <constraint firstItem="dMh-vj-i5F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="59" id="oGZ-RT-h4i"/>
+                            <constraint firstAttribute="trailing" secondItem="dMh-vj-i5F" secondAttribute="trailing" id="qxE-8u-2Sy"/>
+                            <constraint firstAttribute="bottom" secondItem="dMh-vj-i5F" secondAttribute="bottom" id="xAd-ve-aO5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="BgE-zL-LiS" id="33h-CD-0N2"/>
