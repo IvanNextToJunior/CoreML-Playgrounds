@@ -20,6 +20,8 @@
 				</dict>
 			</array>
 		</dict>
+		<key>NSCameraUsageDescription</key>
+		<string>Camera access needed to take photos.</string>
 	</dict>
 </dict>
 </plist>
