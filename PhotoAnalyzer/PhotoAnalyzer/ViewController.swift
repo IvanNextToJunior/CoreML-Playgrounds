@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Vision
 
 class ViewController: UIViewController {
 
@@ -34,6 +35,17 @@ class ViewController: UIViewController {
         picker.sourceType = sourceType
         present(picker, animated: true)
         
+    }
+    
+    let request = VNDetectHorizonRequest() {request, error in
+        if let detectError = error {
+          print(detectError)
+            return
+        }
+        
+        else {
+            guard let observations = request.results as? [VNRectangleObservation] else {return}
+        }
     }
     
     override func viewDidLoad() {
