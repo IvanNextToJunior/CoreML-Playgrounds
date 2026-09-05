@@ -64,6 +64,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {fatalError("Couldn't retrieve image from picker")}
         
         imageView.image = image
+        performVisionRequest(image: image)
         
     }
 }
