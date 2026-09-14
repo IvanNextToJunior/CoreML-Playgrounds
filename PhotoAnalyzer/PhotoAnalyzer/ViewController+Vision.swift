@@ -28,6 +28,19 @@ extension ViewController {
             
         }
     }
+    
+    private func visualizeObservations(_ observations: [VNDetectedObjectObservation]) {
+        DispatchQueue.main.async {
+            
+            guard let image = self.imageView.image else {
+                print("Failed to retrieve image!")
+                return
+            }
+            let imageSize = image.size
+            var transform = CGAffineTransform.identity.scaledBy(x: 1, y: -1).translatedBy(x: 0, y: -imageSize.height)
+            transform = transform.scaledBy(x: imageSize.width, y: imageSize.height)
+        }
+    }
     var detectionRequest: VNDetectRectanglesRequest {
         let request = VNDetectRectanglesRequest() {request, error in
            
