@@ -63,8 +63,8 @@ extension ViewController {
             
         }
     }
-    var detectionRequest: VNDetectFaceRectanglesRequest  {
-        let request = VNDetectFaceRectanglesRequest() {request, error in
+    var detectionRequest: VNDetectBarcodesRequest  {
+        let request = VNDetectBarcodesRequest() {request, error in
            
             if let detectError = error {
                
@@ -95,3 +95,5 @@ extension ViewController {
 //VNDetectTextRectanglesRequest
 //VNDetectTextRectanglesRequest()
 //        request.reportCharacterBoxes = true
+//VNDetectFaceRectanglesRequest
+//let request = VNDetectFaceRectanglesRequest()
