@@ -15,7 +15,7 @@ extension ViewController {
         guard let newImage =  image.cgImage else {return}
         
         let imageRequestHandler = VNImageRequestHandler(cgImage: newImage, orientation: image.cgOrientation, options: [:])
-        let requests = [detectionRequest]
+        let requests = [textDetectionRequest]
         
         DispatchQueue.global(qos: .userInitiated).async {
             
@@ -63,8 +63,8 @@ extension ViewController {
             
         }
     }
-    var detectionRequest: VNDetectRectanglesRequest {
-        let request = VNDetectRectanglesRequest() {request, error in
+    var textDetectionRequest: VNDetectTextRectanglesRequest {
+        let request = VNDetectTextRectanglesRequest() {request, error in
            
             if let detectError = error {
                
@@ -82,10 +82,12 @@ extension ViewController {
             
         }
        
-        request.maximumObservations = 0
-        request.minimumConfidence = 0.5
-        request.minimumAspectRatio = 0.4
-        
+        request.reportCharacterBoxes = true
         return request
     }
 }
+//VNDetectRectanglesRequest
+//request.maximumObservations = 0
+//        request.minimumConfidence = 0.5
+//        request.minimumAspectRatio = 0.4
+/*VNDetectRectanglesRequest()*/
